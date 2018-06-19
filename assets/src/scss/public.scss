@@ -2,10 +2,28 @@
 =            GLOBALS            =
 =============================*/
 
-// @import "global";
+@import "global";
 
 /*=======================================
 =       PUBLIC:  PLUGIN STYLES          =
 =======================================*/
 
 
+#mpf-related-posts {
+
+	text-align: center;
+	padding-top: 1rem;
+
+	a {
+		border: 1rem solid #e3e3e3;
+		background-color: #e3e3e3;
+		text-decoration: none !important;
+		display: block;
+		width: 100% !important;
+	}
+
+	.ajax-loader {
+		display: none;
+	}
+
+}

@@ -4,8 +4,8 @@
  *
  * Plugin Name: MPF Related Post
  * Plugin URI:	https://htmlfivedev.com 
- * Description: Display a short notice above the post content.
- * Version: 	2.0
+ * Description: Displays Related Posts.
+ * Version: 	1.0
  * Author URI: 	https://www.linkedin.com/in/ahmedmusawir
  * License: 	GPL-2.0+ 
  *
@@ -22,6 +22,28 @@ define( "RELATED_POST_MPF_PLUGIN_DIR", plugin_dir_path( __FILE__ ) );
 
 require_once( plugin_dir_path( __FILE__ ) . 'class-related-post-mpf.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'class-enqueue.php' );
+
+
+	function related_post_register_fields() {
+
+		global $post;
+		# code...
+		register_rest_field( 'post', 'author_name',
+			array(
+				'get_callback' => 'related_post_author_name',
+				'update_callback' => null,
+				'schema' => null
+			)
+		);
+	}
+
+	function related_post_author_name( $object, $field_name, $request )	{
+		# code...
+		return get_the_author_meta( 'display_name' );
+	}
+
+	add_filter( 'rest_api_init', 'related_post_register_fields' );
+
 
 
 // INSTANTIATE CLASSES
