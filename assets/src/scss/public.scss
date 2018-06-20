@@ -2,7 +2,7 @@
 =            GLOBALS            =
 =============================*/
 
-@import "global";
+// @import "global";
 
 /*=======================================
 =       PUBLIC:  PLUGIN STYLES          =
@@ -14,7 +14,7 @@
 	text-align: center;
 	padding-top: 1rem;
 
-	a {
+	a.get-related-posts {
 		border: 1rem solid #e3e3e3;
 		background-color: #e3e3e3;
 		text-decoration: none !important;
@@ -24,6 +24,21 @@
 
 	.ajax-loader {
 		display: none;
+	}
+
+	.post-block {
+		border: 1px solid #e3e3e3;
+		padding-top: 1rem;
+		background-color: lighten(#e3e3e3, 7%);
+
+		p {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+		img {
+			margin: 0 auto;
+			clear: both;
+		}
 	}
 
 }

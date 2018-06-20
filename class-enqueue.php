@@ -13,8 +13,8 @@ class RelatedPostMPFEnqueue
 
 	public function initialize() {
 
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
+		// add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
+		// add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_scripts' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_public_scripts' ) );
